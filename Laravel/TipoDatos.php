@@ -1,0 +1,61 @@
+<?php
+
+$table -> bigIncrements('id');  // CREA UNA COLUMNA LLAMADA ID, QUE TENDRA LLAVE PRIMARIA AUTO INCREMENTABLE
+// DE TIPO INTEGER GRANDE.
+
+$table -> bigInteger('cantidad');  // CREA UNA COLUMNA LLAMADA 'cantidad' DE TIPO INTEGER GRANDE.
+
+$table -> binary('miFotografia');  // CREA UNA COLUMNA LLAMADA 'miFotografia' DE TIPO BINARIO.
+
+$table -> boolean('activo');  // CREA UNA COLUMNA LLAMADA 'activo' DE TIPO BOOLEANO (TRUE O FALSE).
+
+$table -> char('nombre', 100);  // CREA UNA COLUMNA LLAMADA 'nombre' DE TIPO CHAR, QUE RECIBE EL NOMBRE DE LA COLUMNA
+// Y EL TIPO DE LONGITUD MAXIMA DE CARACTERES QUE EN ESTE CASO ES 100.
+
+$table -> dateTimeTz('created_at', $precision = 0);  // CREA UNA COLUMNA LLAMADA 'created_at' DE TIPO FECHA
+// Y ZONA HORARIA, AGREGANDO UNA VARIABLE 'presicion' de 0.
+
+$table -> dateTime('created_at', $precision = 0);  // CREA UNA COLUMNA LLAMADA 'created_at' DE TIPO FECHA Y HORA
+// AGREGANDO UNA VARIABLE 'presicion' de 0.
+
+$table -> date('created_at');  // CREA UNA COLUMNA LLAMADA 'created_at' DE TIPO FECHA.
+
+$table -> decimal('precio', $precision = 8, $scale = 2);  // CREA UNA COLUMNA LLAMADA 'precio' DE TIPO DECIMAL
+// AGREGANDO UNA VARIABLE DE 'precision' DE 8, Y UNA 'scale' de 2.
+
+$table -> ENUM('genero', ['M', 'F']);  // CREA UNA COLUMNA LLAMADA 'genero' DE TIPO ENUM CON VALORES DE 'M' Y 'F'.
+// (MASCULINO Y FEMENINO)
+
+$table -> FLOAT('peso', 8, 2);  // CREA UNA COLUMNA LLAMADA 'peso' DE TIPO FLOTANTE AGREGANDO UNA VARIABLE DE 'precision' DE 8
+// Y UNA 'scale' de 2.
+
+$table -> FOREIGNID('user_id');  // CREA UNA COLUMNA LLAMADA 'user_id' ASIGNANDOLA COMO LLAVE FOARENA.
+
+$table -> FOREIGNIDFOR(USER::CLASS);  // CREA UNA COLUMNA LLAMADA 'user_id' ASIGNADOLA COMO LLAVE FORANEA
+// RELACIONANDOLA CON LA TABLA DE 'USERS'.
+
+$table -> INCREMENTS('id');  // CREA UNA COLUMNA QUE SERA LLAVE PRIMARIA AUTOINCREMENTABLE.
+
+$table -> INTEGER('edad');  // CREA UNA COLUMNA LLAMADA 'edad' DE TIPO ENTERO.
+
+$table -> STRING('nombreCliente', 100);  // CREA UNA COLUMNA LLAMADA 'nombreCliente' DE TIPO CADENA DE TEXTO 
+// AGREGANDOLE UN ARGUMENTO DE UNA LONGITUD MAXIMA DE 100 CARACTERES.
+
+$table -> TEXT('descripcion');  // CREA UNA COLUMNA LLAMADA 'descripcion' DE TIPO TEXTO.
+
+$table -> TIME('amanecer', $PRECISION = 0);  // CREA UNA COLUMNA LLAMADA 'amanecer' DE TIPO HORA 
+// AGREGANDO UNA VARIABLE DE 'precision' DE 0.
+
+$table -> TIMESTAMP('agregadoEn', $PRECISION = 0);  // CREA UNA COLUMNA LLAMADA 'agregadoEn' DE TIPO 
+// MARCA DE TIEMPO, AGREGANDO UNA VARIABLE DE 'precision' DE 0.
+
+$table -> TIMESTAMPS($PRECISION = 0);  // CREA DOS COLUMNAS, 'created_at' Y 'update_at'
+// PARA ASIGNAR LAS MARCAS DE CREACION CON PRECISION DE 0.
+
+$table -> TINYINCREMENTS('id');  // CREA UNA COLUMNA DE LLAVE PRIMARIA AUTO INCREMENTABLE PEQUEÑA.
+
+$table -> UNSIGNEDBIGINTEGER('votacion');  // CREA UNA COLUMNA LLAMADA 'votacion' DE TIPO INTEGER GRANDE
+// NO ACEPTA CARACTERES SIN SIGNO.
+
+$table -> UNSIGNEDSMALLINTEGER('votes');  // CREA UNA COLUMNA LLAMADA 'votes' DE TIPO INTEGER PEQUEÑO 
+// NO ACEPTA CARACTERES SIN SIGNO.
